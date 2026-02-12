@@ -1,7 +1,7 @@
 "use client";
 
 export default function WhatsAppButton() {
-  const phone = "905321234567";
+  const phone = "905327344119";
   const message = "Merhaba, LED ekran teklifi almak istiyorum.";
 
   return (

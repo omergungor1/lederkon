@@ -97,7 +97,6 @@ export default function TeklifForm({ id = "teklif-form", compact = false }) {
               <option value="dugun">Düğün Salonu LED</option>
               <option value="avm">AVM LED Ekran</option>
               <option value="cami">Cami LED Ekran</option>
-              <option value="totem">Totem LED Ekran</option>
             </select>
           </div>
         )}

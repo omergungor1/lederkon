@@ -21,8 +21,8 @@ export default function IletisimPage() {
           <ul className="mt-6 space-y-4 text-[#D1D5DB]">
             <li>
               <strong className="text-white">Telefon:</strong>{" "}
-              <a href="tel:+905321234567" className="text-[#00E5FF] hover:underline">
-                +90 532 123 45 67
+              <a href="tel:+905327344119" className="text-[#00E5FF] hover:underline">
+                0532 734 41 19
               </a>
             </li>
             <li>
@@ -32,7 +32,7 @@ export default function IletisimPage() {
               </a>
             </li>
             <li>
-              <strong className="text-white">Adres:</strong> İstanbul, Türkiye
+              <strong className="text-white">Adres:</strong> Beşevler Küçük Sanayi Sitesi 23. Sokak, 23. Blok No:3, Nilüfer / Bursa
             </li>
           </ul>
           <p className="mt-6 text-[#D1D5DB]">

@@ -32,7 +32,7 @@ const surec = [
 const projelerHome = [
   { title: "Düğün Salonu LED Ekran", category: "dugun", image: "/images/gallery/wedding-1.webp", slug: "dugun-salonu" },
   { title: "AVM İç Mekan Ekran", category: "avm", image: "/images/gallery/mall-1.png", slug: "avm" },
-  { title: "Cami Vaaz Ekranı", category: "cami", image: "/images/gallery/cami-1.jpg", slug: "cami" },
+  { title: "Cami Bilgi ve Vakit Ekranı", category: "cami", image: "/images/gallery/cami-1.jpg", slug: "cami" },
   { title: "Mağaza Vitrin LED", category: "magaza", image: "/images/gallery/store-1.jpg", slug: "magaza" },
 ];
 
@@ -56,9 +56,18 @@ export default function Home() {
   return (
     <>
       <JsonLd data={localBusinessSchema} />
-      <section className="relative overflow-hidden bg-[#0B0F1A] py-20 sm:py-28 lg:py-36">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,229,255,0.08)_0%,transparent_70%)]" />
-        <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      <section className="relative min-h-[85vh] overflow-hidden bg-[#0B0F1A] py-28 sm:py-36 lg:py-48 xl:py-56">
+        <Image
+          src="/led-ekran-home-banner.webp"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[#0B0F1A]/70" aria-hidden />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,229,255,0.12)_0%,transparent_70%)]" aria-hidden />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Profesyonel LED Ekran Çözümleri
           </h1>
@@ -67,11 +76,11 @@ export default function Home() {
             LED ekran fiyatları ve proje teklifi için hemen iletişime geçin.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Button href="/iletisim#teklif" variant="primary">
-              Teklif Al
+            <Button href="tel:+905327344119" variant="primary">
+              Hemen Ara
             </Button>
-            <Button href="/projeler" variant="secondary">
-              Projeleri İncele
+            <Button href="/iletisim#teklif" variant="secondary">
+              Teklif Al
             </Button>
           </div>
         </div>
@@ -175,17 +184,23 @@ export default function Home() {
           <p className="mx-auto mt-4 max-w-2xl text-center text-[#D1D5DB]">
             Tekliften montaja kadar şeffaf ve düzenli bir süreç.
           </p>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="relative mt-12 flex flex-col gap-8 sm:flex-row sm:flex-wrap lg:flex-nowrap lg:gap-0">
+            {/* Tek çizgi: tüm dairelerin ortasından geçer, dairelerin altında kalır */}
+            <div
+              className="absolute left-0 right-0 top-6 hidden h-0.5 bg-[#00E5FF]/30 lg:block"
+              style={{ left: "12.5%", right: "12.5%" }}
+              aria-hidden
+            />
             {surec.map((item) => (
-              <div key={item.step} className="relative text-center">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#00E5FF] text-lg font-bold text-[#0B0F1A]">
+              <div
+                key={item.step}
+                className="relative z-10 flex flex-1 basis-0 flex-col items-center text-center lg:min-w-0"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#00E5FF] text-lg font-bold text-[#0B0F1A]">
                   {item.step}
                 </div>
                 <h3 className="mt-4 font-semibold text-white">{item.title}</h3>
                 <p className="mt-2 text-sm text-[#D1D5DB]">{item.desc}</p>
-                {item.step < 4 && (
-                  <div className="absolute left-1/2 top-6 hidden h-0.5 w-full bg-[#00E5FF]/30 lg:block" style={{ width: "50%" }} />
-                )}
               </div>
             ))}
           </div>
@@ -232,15 +247,15 @@ export default function Home() {
 
       <section className="border-t border-white/10 bg-[#0B0F1A] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold text-white sm:text-4xl">
               Ücretsiz Teklif Alın
             </h2>
             <p className="mt-4 text-[#D1D5DB]">
               LED ekran fiyatları ve proje teklifi için formu doldurun, size özel teklif hazırlayalım.
             </p>
-            <div className="mt-10 flex justify-center">
-              <TeklifForm id="ana-sayfa-teklif" compact />
+            <div className="mt-10 w-full">
+              <TeklifForm id="ana-sayfa-teklif" />
             </div>
           </div>
         </div>
