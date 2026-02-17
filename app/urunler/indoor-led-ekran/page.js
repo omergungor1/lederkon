@@ -8,6 +8,14 @@ export const metadata = {
   keywords: "indoor led ekran, kapalı alan led ekran, led ekran fiyatları, led ekran montaj",
 };
 
+const galleryImages = [
+  "/images/gallery/wedding-1.webp",
+  "/images/gallery/mall-1.png",
+  "/images/gallery/cami-1.jpg",
+  "/images/gallery/store-1.jpg",
+  "/images/gallery/billboard-1.webp",
+];
+
 const teknikOzellikler = [
   "Pixel pitch: P1.2 – P4 arası seçenekler",
   "Parlaklık: 600–1200 cd/m² (iç mekân uyumlu)",
@@ -84,6 +92,7 @@ export default function IndoorLedEkranPage() {
       description="Kapalı alanlar için yüksek çözünürlüklü indoor LED ekran çözümleri. LED ekran fiyatları ve montaj teklifi için bize ulaşın."
       image="/images/products/Indoor LED panel close up.jpg"
       imageAlt="Indoor LED ekran"
+      galleryImages={galleryImages}
       content={content}
       teknikOzellikler={teknikOzellikler}
       kullanimAlanlari={kullanimAlanlari}

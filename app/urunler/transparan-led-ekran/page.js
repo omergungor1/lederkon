@@ -8,6 +8,14 @@ export const metadata = {
   keywords: "şeffaf led ekran, transparan led ekran, cam led ekran, vitrin led ekran, showroom led, led ekran montaj",
 };
 
+const galleryImages = [
+  "/images/gallery/wedding-1.webp",
+  "/images/gallery/mall-1.png",
+  "/images/gallery/cami-1.jpg",
+  "/images/gallery/store-1.jpg",
+  "/images/gallery/billboard-1.webp",
+];
+
 const teknikOzellikler = [
   "Yüksek ışık geçirgenliği (transparan modül)",
   "Cam ve vitrin uygulamasına uygun montaj",
@@ -79,6 +87,7 @@ export default function TransparanLedEkranPage() {
       description="Vitrin, cam ve showroom uygulamaları için şeffaf LED ekran. Cam arkası reklam ve dijital vitrin çözümleri. Teklif alın."
       image="/images/product-list/Transparent-LED-Screen.jpg"
       imageAlt="Şeffaf LED ekran"
+      galleryImages={galleryImages}
       content={content}
       teknikOzellikler={teknikOzellikler}
       kullanimAlanlari={kullanimAlanlari}

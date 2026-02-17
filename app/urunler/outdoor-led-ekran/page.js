@@ -8,6 +8,14 @@ export const metadata = {
   keywords: "outdoor led ekran, açık hava led ekran, led reklam panosu, led ekran montaj firması",
 };
 
+const galleryImages = [
+  "/images/gallery/wedding-1.webp",
+  "/images/gallery/mall-1.png",
+  "/images/gallery/cami-1.jpg",
+  "/images/gallery/store-1.jpg",
+  "/images/gallery/billboard-1.webp",
+];
+
 const teknikOzellikler = [
   "Pixel pitch: P4 – P10 arası (açık hava uyumlu)",
   "Parlaklık: 5000–8000 cd/m² (gündüz görünür)",
@@ -83,6 +91,7 @@ export default function OutdoorLedEkranPage() {
       description="Açık hava ve reklam panoları için yüksek parlaklıklı, dayanıklı outdoor LED ekran. Fiyat ve teklif için iletişime geçin."
       image="/images/products/Outdoor LED cabinet back side.jpg"
       imageAlt="Outdoor LED ekran"
+      galleryImages={galleryImages}
       content={content}
       teknikOzellikler={teknikOzellikler}
       kullanimAlanlari={kullanimAlanlari}

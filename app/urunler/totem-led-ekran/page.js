@@ -8,6 +8,14 @@ export const metadata = {
   keywords: "totem led ekran, poster led ekran, bilgi ekranı, yönlendirme totemi, led ekran montaj firması",
 };
 
+const galleryImages = [
+  "/images/gallery/wedding-1.webp",
+  "/images/gallery/mall-1.png",
+  "/images/gallery/cami-1.jpg",
+  "/images/gallery/store-1.jpg",
+  "/images/gallery/billboard-1.webp",
+];
+
 const teknikOzellikler = [
   "İnce tasarım, tek veya çift yüz",
   "Pixel pitch: P1.5 – P3",
@@ -78,6 +86,7 @@ export default function TotemLedEkranPage() {
       description="AVM, hastane ve kurumsal mekânlar için totem ve bilgi ekranı LED çözümleri. Teklif alın."
       image="/images/products/LED poster display.webp"
       imageAlt="Totem LED ekran"
+      galleryImages={galleryImages}
       content={content}
       teknikOzellikler={teknikOzellikler}
       kullanimAlanlari={kullanimAlanlari}

@@ -8,6 +8,14 @@ export const metadata = {
   keywords: "düğün salonu led ekran, düğün led ekran, nikah ekranı, led ekran fiyatları",
 };
 
+const galleryImages = [
+  "/images/gallery/wedding-1.webp",
+  "/images/gallery/mall-1.png",
+  "/images/gallery/cami-1.jpg",
+  "/images/gallery/store-1.jpg",
+  "/images/gallery/billboard-1.webp",
+];
+
 const teknikOzellikler = [
   "Pixel pitch: P2.5 – P4 (salon boyutuna göre)",
   "Parlaklık: 800–1200 cd/m²",
@@ -78,6 +86,7 @@ export default function DugunSalonuLedEkranPage() {
       description="Düğün ve nikah organizasyonları için LED ekran kiralama ve sabit montaj. Fiyat ve paket bilgisi için teklif alın."
       image="/images/gallery/wedding-1.webp"
       imageAlt="Düğün salonu LED ekran"
+      galleryImages={galleryImages}
       content={content}
       teknikOzellikler={teknikOzellikler}
       kullanimAlanlari={kullanimAlanlari}

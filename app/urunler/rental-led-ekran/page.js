@@ -9,6 +9,14 @@ export const metadata = {
     "kiralık led ekran, rental led ekran, etkinlik led ekran, sahne led ekran, konser led ekran, fuar led ekran, led ekran kiralama",
 };
 
+const galleryImages = [
+  "/images/gallery/wedding-1.webp",
+  "/images/gallery/mall-1.png",
+  "/images/gallery/cami-1.jpg",
+  "/images/gallery/store-1.jpg",
+  "/images/gallery/billboard-1.webp",
+];
+
 const teknikOzellikler = [
   "Hızlı kilit (lock) sistemli modüler rental kabinet",
   "Indoor/Outdoor seçenekleri (proje alanına göre)",
@@ -94,6 +102,7 @@ export default function RentalLedEkranPage() {
       description="Konser, fuar, lansman ve organizasyonlar için kiralık LED ekran çözümleri. Hızlı kurulum, modüler panel ve teknik destek. Teklif alın."
       image="/images/product-list/rental-screen.webp"
       imageAlt="Kiralık rental LED ekran"
+      galleryImages={galleryImages}
       content={content}
       teknikOzellikler={teknikOzellikler}
       kullanimAlanlari={kullanimAlanlari}

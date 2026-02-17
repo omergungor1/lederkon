@@ -8,6 +8,14 @@ export const metadata = {
   keywords: "cami led ekran, cami vaaz ekranı, cami ekran sistemleri, led ekran montaj",
 };
 
+const galleryImages = [
+  "/images/gallery/wedding-1.webp",
+  "/images/gallery/mall-1.png",
+  "/images/gallery/cami-1.jpg",
+  "/images/gallery/store-1.jpg",
+  "/images/gallery/billboard-1.webp",
+];
+
 const teknikOzellikler = [
   "Pixel pitch: P2.5 – P4 (salon mesafesine göre)",
   "Parlaklık: 600–1000 cd/m² (iç mekân)",
@@ -78,6 +86,7 @@ export default function CamiLedEkranPage() {
       description="Cami ve ibadethaneler için vaaz, hutbe ve bilgilendirme LED ekranı. Fiyat ve montaj teklifi alın."
       image="/images/gallery/cami-1.jpg"
       imageAlt="Cami LED ekran"
+      galleryImages={galleryImages}
       content={content}
       teknikOzellikler={teknikOzellikler}
       kullanimAlanlari={kullanimAlanlari}

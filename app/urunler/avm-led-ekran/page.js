@@ -8,6 +8,14 @@ export const metadata = {
   keywords: "avm led ekran, alışveriş merkezi led ekran, avm reklam ekranı, led ekran montaj firması",
 };
 
+const galleryImages = [
+  "/images/gallery/wedding-1.webp",
+  "/images/gallery/mall-1.png",
+  "/images/gallery/cami-1.jpg",
+  "/images/gallery/store-1.jpg",
+  "/images/gallery/billboard-1.webp",
+];
+
 const teknikOzellikler = [
   "İç mekân: P2–P4, dış cephe: P4–P6",
   "Parlaklık: iç 800–1200, dış 5000+ cd/m²",
@@ -77,6 +85,7 @@ export default function AvmLedEkranPage() {
       description="AVM ve alışveriş merkezleri için reklam ve bilgilendirme LED ekranları. Proje ve fiyat teklifi için iletişime geçin."
       image="/images/gallery/mall-1.png"
       imageAlt="AVM LED ekran"
+      galleryImages={galleryImages}
       content={content}
       teknikOzellikler={teknikOzellikler}
       kullanimAlanlari={kullanimAlanlari}

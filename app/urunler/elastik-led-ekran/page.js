@@ -8,6 +8,14 @@ export const metadata = {
   keywords: "esnek led ekran, elastik led ekran, kavisli led ekran, curved led, silindirik led ekran, led ekran montaj",
 };
 
+const galleryImages = [
+  "/images/gallery/wedding-1.webp",
+  "/images/gallery/mall-1.png",
+  "/images/gallery/cami-1.jpg",
+  "/images/gallery/store-1.jpg",
+  "/images/gallery/billboard-1.webp",
+];
+
 const teknikOzellikler = [
   "Eğilebilir (flexible) modül yapısı",
   "Belirli eğrilik yarıçapına kadar kavisli montaj",
@@ -79,6 +87,7 @@ export default function ElastikLedEkranPage() {
       description="Kavisli yüzey, silindirik ve özel formatta eğilebilir LED ekran. Fuar, showroom ve AVM projeleri. Teklif alın."
       image="/images/product-list/flexible-led-display-screen.webp"
       imageAlt="Esnek LED ekran"
+      galleryImages={galleryImages}
       content={content}
       teknikOzellikler={teknikOzellikler}
       kullanimAlanlari={kullanimAlanlari}
