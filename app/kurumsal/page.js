@@ -1,3 +1,5 @@
+import PageHero from "@/components/PageHero";
+
 export const metadata = {
   title: "Kurumsal",
   description:
@@ -7,13 +9,13 @@ export const metadata = {
 
 export default function KurumsalPage() {
   return (
-    <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-white">Kurumsal</h1>
-      <p className="mt-4 text-lg text-[#D1D5DB]">
-        Lederkon olarak LED ekran montaj ve proje alanında Türkiye&apos;nin güvenilir çözüm ortağıyız.
-      </p>
-
-      <section className="mt-12">
+    <>
+      <PageHero
+        title="Kurumsal"
+        description="Lederkon olarak LED ekran montaj ve proje alanında Türkiye'nin güvenilir çözüm ortağıyız."
+      />
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="mt-0">
         <h2 className="text-2xl font-bold text-white">Hakkımızda</h2>
         <div className="mt-4 space-y-4 text-[#D1D5DB]">
           <p>
@@ -45,6 +47,7 @@ export default function KurumsalPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

@@ -3,8 +3,32 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import TeklifForm from "@/components/TeklifForm";
 import JsonLd from "@/components/JsonLd";
+import HeroSlider from "@/components/HeroSlider";
 import { URUNLER, SITE_URL } from "@/lib/constants";
 import { projeler } from "@/lib/projeler";
+
+const sliderSlides = [
+  {
+    image: "/images/gallery/wedding-1.webp",
+    title: "Dayanıklı ve Sağlam Kabinet",
+    description: "Yüksek kaliteli malzeme ve profesyonel montaj ile uzun ömürlü LED ekran çözümleri.",
+  },
+  {
+    image: "/images/gallery/mall-1.png",
+    title: "Garantili Sistemler",
+    description: "Montaj sonrası garanti ve hızlı teknik servis ile Lederkon güvencesi.",
+  },
+  {
+    image: "/images/gallery/cami-1.jpg",
+    title: "100.000+ Saat Kullanım Ömrü",
+    description: "Kaliteli LED modüller ve doğru projelendirme ile yıllarca kesintisiz kullanım.",
+  },
+  {
+    image: "/images/gallery/billboard-1.webp",
+    title: "Lederkon Güvencesiyle",
+    description: "Türkiye genelinde keşif, montaj, devreye alma ve teknik destek tek adreste.",
+  },
+];
 
 const sssListe = [
   {
@@ -127,6 +151,31 @@ export default function Home() {
             <Button href="/iletisim#teklif" variant="secondary" className="border-[#B9FF00] text-[#B9FF00] border-2">
               Teklif Al
             </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/10 bg-[#111827] py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div>
+              <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl">
+                Türkiye&apos;nin Güvenilir LED Ekran Tedarikçisi
+              </h2>
+              <div className="mt-4 h-1 w-16 rounded-full bg-[#00E5FF]" aria-hidden />
+              <p className="mt-6 max-w-lg text-[#D1D5DB] leading-relaxed">
+                Dayanıklı, sağlam ve garantili LED duvar panelleri ile ekran sistemleri. 100.000+ saat kullanım ömrü,
+                profesyonel montaj ve Lederkon güvencesiyle indoor, outdoor, düğün salonu ve kurumsal projelerde yanınızdayız.
+              </p>
+              <div className="mt-8">
+                <Button href="/iletisim#teklif" variant="primary">
+                  Teklif Al
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <HeroSlider slides={sliderSlides} />
+            </div>
           </div>
         </div>
       </section>

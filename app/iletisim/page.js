@@ -1,4 +1,6 @@
+import PageHero from "@/components/PageHero";
 import TeklifForm from "@/components/TeklifForm";
+import BizeUlasinForm from "@/components/BizeUlasinForm";
 
 export const metadata = {
   title: "İletişim",
@@ -9,13 +11,14 @@ export const metadata = {
 
 export default function IletisimPage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-white">İletişim</h1>
-      <p className="mt-4 max-w-3xl text-lg text-[#D1D5DB]">
-        LED ekran fiyatları ve proje teklifi için formu doldurun veya telefon, WhatsApp ile ulaşın.
-      </p>
-
-      <div className="mt-12 grid gap-12 lg:grid-cols-2">
+    <>
+      <PageHero
+        variant="iletisim"
+        title="Bize Ulaşın"
+        description="LED ekran fiyatları ve proje teklifi için formu doldurun veya telefon, WhatsApp ile ulaşın."
+      />
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="grid gap-12 lg:grid-cols-2">
         <div>
           <h2 className="text-2xl font-bold text-white">İletişim Bilgileri</h2>
           <ul className="mt-6 space-y-4 text-[#D1D5DB]">
@@ -63,15 +66,17 @@ export default function IletisimPage() {
             </div>
           </div>
           <p className="mt-6 text-[#D1D5DB]">
-            LED ekran montaj firması olarak Türkiye genelinde hizmet veriyoruz. Teklif almak için formu doldurmanız yeterli.
+            LED ekran montaj firması olarak Türkiye genelinde hizmet veriyoruz. Sorularınız için bize ulaşın veya teklif formunu doldurun.
           </p>
         </div>
 
-        <div id="teklif">
-          <h2 className="text-2xl font-bold text-white">Teklif Formu</h2>
-          <p className="mt-2 text-[#D1D5DB]">LED ekran fiyatları ve proje teklifi için aşağıdaki formu doldurun.</p>
+        <div>
+          <h2 className="text-2xl font-bold text-white">Bize Ulaşın</h2>
+          <p className="mt-2 text-[#D1D5DB]">
+            Genel sorularınız, öneri veya mesajınız için formu doldurun. En kısa sürede size dönüş yapacağız.
+          </p>
           <div className="mt-6">
-            <TeklifForm id="iletisim-teklif" />
+            <BizeUlasinForm id="iletisim-bize-ulasin" />
           </div>
         </div>
       </div>
@@ -93,6 +98,21 @@ export default function IletisimPage() {
           />
         </div>
       </section>
-    </div>
+
+      <section id="teklif" className="mt-16 scroll-mt-24">
+        <div className="grid gap-12 lg:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-bold text-white">Teklif Formu</h2>
+            <p className="mt-2 text-[#D1D5DB]">
+              LED ekran fiyatları ve proje teklifi için ürün tipini seçip formu doldurun.
+            </p>
+            <div className="mt-6">
+              <TeklifForm id="iletisim-teklif" />
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+    </>
   );
 }

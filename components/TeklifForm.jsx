@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Button from "./Button";
+import { URUNLER } from "@/lib/constants";
 
 export default function TeklifForm({ id = "teklif-form", compact = false }) {
   const [status, setStatus] = useState("");
@@ -92,11 +93,11 @@ export default function TeklifForm({ id = "teklif-form", compact = false }) {
               className="w-full rounded-lg border border-white/20 bg-[#0B0F1A] px-4 py-2 text-white focus:border-[#00E5FF] focus:outline-none focus:ring-1 focus:ring-[#00E5FF]"
             >
               <option value="">Seçiniz</option>
-              <option value="indoor">Indoor LED Ekran</option>
-              <option value="outdoor">Outdoor LED Ekran</option>
-              <option value="dugun">Düğün Salonu LED</option>
-              <option value="avm">AVM LED Ekran</option>
-              <option value="cami">Cami LED Ekran</option>
+              {URUNLER.map((u) => (
+                <option key={u.slug} value={u.slug}>
+                  {u.title}
+                </option>
+              ))}
             </select>
           </div>
         )}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 import { blogYazilari } from "@/lib/blog";
 
 export const metadata = {
@@ -11,12 +12,13 @@ export const metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-white">Blog</h1>
-      <p className="mt-4 max-w-2xl text-lg text-[#D1D5DB]">
-        LED ekran fiyatları, teknik bilgiler ve proje ipuçları. SEO uyumlu makaleler.
-      </p>
-      <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <>
+      <PageHero
+        title="Blog"
+        description="LED ekran fiyatları, teknik bilgiler ve proje ipuçları. SEO uyumlu makaleler."
+      />
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {blogYazilari.map((yazi) => (
           <Link
             key={yazi.slug}
@@ -42,6 +44,7 @@ export default function BlogPage() {
           </Link>
         ))}
       </div>
-    </div>
+      </div>
+    </>
   );
 }
