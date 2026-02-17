@@ -120,7 +120,7 @@ export default function TeklifForm({ id = "teklif-form", compact = false }) {
           Teklif Al
         </Button>
         {status && (
-          <span className="text-sm text-[#00E5FF]">{status}</span>
+          <span className="text-sm text-[#B9FF00]">{status}</span>
         )}
       </div>
     </form>

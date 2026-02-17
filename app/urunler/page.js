@@ -35,7 +35,7 @@ export default function UrunlerPage() {
             <div className="p-5">
               <h2 className="text-xl font-semibold text-white group-hover:text-[#00E5FF]">{urun.title}</h2>
               <p className="mt-2 text-[#D1D5DB]">{urun.short}</p>
-              <span className="mt-3 inline-block text-sm font-medium text-[#00E5FF]">Detaylı bilgi →</span>
+              <span className="mt-3 inline-block text-sm font-medium text-[#B9FF00]">Detaylı bilgi →</span>
             </div>
           </Link>
         ))}

@@ -37,8 +37,8 @@ export default function KurumsalPage() {
               Müşterilerimize en uygun LED ekran çözümlerini, kaliteli malzeme ve profesyonel montaj ile sunmak. LED ekran fiyatları ve performans dengesinde en iyi değeri sağlamak.
             </p>
           </div>
-          <div className="rounded-xl border border-[#00E5FF]/20 bg-[#111827] p-6">
-            <h3 className="text-lg font-semibold text-[#00E5FF]">Vizyonumuz</h3>
+          <div className="rounded-xl border border-[#B9FF00]/20 bg-[#111827] p-6">
+            <h3 className="text-lg font-semibold text-[#B9FF00]">Vizyonumuz</h3>
             <p className="mt-3 text-[#D1D5DB]">
               Türkiye&apos;nin her noktasında tercih edilen, indoor led ekran ve outdoor led ekran projelerinde referans gösterilen bir LED ekran montaj firması olmak.
             </p>

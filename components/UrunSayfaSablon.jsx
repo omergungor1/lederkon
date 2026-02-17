@@ -20,7 +20,7 @@ export default function UrunSayfaSablon({
       {jsonLdProduct && <JsonLd data={jsonLdProduct} />}
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <nav className="mb-6 text-sm text-[#D1D5DB]">
-          <Link href="/urunler" className="hover:text-[#00E5FF]">Ürünler</Link>
+          <Link href="/urunler" className="hover:text-[#B9FF00]">Ürünler</Link>
           <span className="mx-2">/</span>
           <span className="text-white">{title}</span>
         </nav>

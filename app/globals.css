@@ -4,6 +4,7 @@
   --background: #0B0F1A;
   --background-secondary: #111827;
   --accent: #00E5FF;
+  --accent-lime: #B9FF00;
   --accent-secondary: #7C3AED;
   --text-primary: #FFFFFF;
   --text-muted: #D1D5DB;
@@ -14,6 +15,7 @@
   --color-background: var(--background);
   --color-background-secondary: var(--background-secondary);
   --color-accent: var(--accent);
+  --color-accent-lime: var(--accent-lime);
   --color-accent-secondary: var(--accent-secondary);
   --color-text-primary: var(--text-primary);
   --color-text-muted: var(--text-muted);
@@ -36,6 +38,36 @@ body {
   box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
 }
 
+.glow-lime {
+  box-shadow: 0 0 18px rgba(185, 255, 0, 0.22);
+}
+
+.glow-lime-hover:hover {
+  box-shadow: 0 0 24px rgba(185, 255, 0, 0.3);
+}
+
+.glow-duo {
+  box-shadow:
+    0 0 22px rgba(0, 229, 255, 0.26),
+    0 0 22px rgba(185, 255, 0, 0.16);
+}
+
+.glow-duo-hover:hover {
+  box-shadow:
+    0 0 28px rgba(0, 229, 255, 0.34),
+    0 0 28px rgba(185, 255, 0, 0.22);
+}
+
 .text-glow {
   text-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+}
+
+.text-glow-lime {
+  text-shadow: 0 0 18px rgba(185, 255, 0, 0.35);
+}
+
+.text-glow-duo {
+  text-shadow:
+    0 0 18px rgba(0, 229, 255, 0.35),
+    0 0 14px rgba(185, 255, 0, 0.25);
 }

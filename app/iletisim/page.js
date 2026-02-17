@@ -21,13 +21,13 @@ export default function IletisimPage() {
           <ul className="mt-6 space-y-4 text-[#D1D5DB]">
             <li>
               <strong className="text-white">Telefon:</strong>{" "}
-              <a href="tel:+905327344119" className="text-[#00E5FF] hover:underline">
+              <a href="tel:+905327344119" className="text-[#00E5FF] hover:text-[#B9FF00] hover:underline">
                 0532 734 41 19
               </a>
             </li>
             <li>
               <strong className="text-white">E-posta:</strong>{" "}
-              <a href="mailto:info@lederkon.com" className="text-[#00E5FF] hover:underline">
+              <a href="mailto:info@lederkon.com" className="text-[#00E5FF] hover:text-[#B9FF00] hover:underline">
                 info@lederkon.com
               </a>
             </li>
@@ -53,7 +53,7 @@ export default function IletisimPage() {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 text-[#D1D5DB] transition hover:bg-[#00E5FF] hover:text-[#111827]"
+                className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 text-[#D1D5DB] transition hover:bg-[#B9FF00] hover:text-[#111827]"
                 aria-label="Instagram"
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

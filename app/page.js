@@ -51,7 +51,10 @@ export default function Home() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-[#0B0F1A]/70" aria-hidden />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,229,255,0.12)_0%,transparent_70%)]" aria-hidden />
+        <div
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,229,255,0.12)_0%,rgba(185,255,0,0.08)_35%,transparent_70%)]"
+          aria-hidden
+        />
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Profesyonel LED Ekran Çözümleri
@@ -64,7 +67,7 @@ export default function Home() {
             <Button href="tel:+905327344119" variant="primary">
               Hemen Ara
             </Button>
-            <Button href="/iletisim#teklif" variant="secondary">
+            <Button href="/iletisim#teklif" variant="secondary" className="border-[#B9FF00] text-[#B9FF00] border-2">
               Teklif Al
             </Button>
           </div>
@@ -119,7 +122,7 @@ export default function Home() {
                 key={item.title}
                 className="rounded-xl border border-[#00E5FF]/20 bg-[#0B0F1A] p-6 text-center"
               >
-                <h3 className="font-semibold text-[#00E5FF]">{item.title}</h3>
+                <h3 className="font-semibold text-[#B9FF00]">{item.title}</h3>
                 <p className="mt-2 text-sm text-[#D1D5DB]">{item.desc}</p>
               </div>
             ))}
@@ -138,7 +141,7 @@ export default function Home() {
           <div className="relative mt-12 flex flex-col gap-8 sm:flex-row sm:flex-wrap lg:flex-nowrap lg:gap-0">
             {/* Tek çizgi: tüm dairelerin ortasından geçer, dairelerin altında kalır */}
             <div
-              className="absolute left-0 right-0 top-6 hidden h-0.5 bg-[#00E5FF]/30 lg:block"
+              className="absolute left-0 right-0 top-6 hidden h-0.5 bg-[linear-gradient(90deg,rgba(0,229,255,0.35),rgba(185,255,0,0.35))] lg:block"
               style={{ left: "12.5%", right: "12.5%" }}
               aria-hidden
             />
@@ -147,7 +150,10 @@ export default function Home() {
                 key={item.step}
                 className="relative z-10 flex flex-1 basis-0 flex-col items-center text-center lg:min-w-0"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#00E5FF] text-lg font-bold text-[#0B0F1A]">
+                <div
+                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold text-[#0B0F1A] ${item.step % 2 === 0 ? "bg-[#B9FF00]" : "bg-[#00E5FF]"
+                    }`}
+                >
                   {item.step}
                 </div>
                 <h3 className="mt-4 font-semibold text-white">{item.title}</h3>
@@ -170,7 +176,7 @@ export default function Home() {
             {projeler.map((proje) => (
               <div
                 key={proje.id}
-                className="group block overflow-hidden rounded-xl border border-white/10 bg-[#0B0F1A] transition hover:border-[#00E5FF]/40"
+                className="group block overflow-hidden rounded-xl border border-white/10 bg-[#0B0F1A] transition hover:border-[#00E5FF]/40 hover:shadow-[0_0_24px_rgba(185,255,0,0.10)]"
               >
                 <div className="relative aspect-[4/3] w-full">
                   <Image

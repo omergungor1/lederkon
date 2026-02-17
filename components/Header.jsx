@@ -41,7 +41,7 @@ export default function Header() {
           ))}
           <Link
             href="/iletisim#teklif"
-            className="rounded-lg bg-[#00E5FF] px-4 py-2 font-semibold text-[#0B0F1A] hover:bg-[#00b8d4]"
+            className="rounded-lg bg-[#00E5FF] px-4 py-2 font-semibold text-[#0B0F1A] transition hover:bg-[linear-gradient(90deg,#00E5FF,#B9FF00)] glow-duo-hover"
           >
             Teklif Al
           </Link>
@@ -78,7 +78,7 @@ export default function Header() {
             ))}
             <Link
               href="/iletisim#teklif"
-              className="mt-2 rounded-lg bg-[#00E5FF] px-4 py-3 text-center font-semibold text-[#0B0F1A]"
+              className="mt-2 rounded-lg bg-[#00E5FF] px-4 py-3 text-center font-semibold text-[#0B0F1A] transition hover:bg-[linear-gradient(90deg,#00E5FF,#B9FF00)] glow-duo-hover"
               onClick={() => setMenuOpen(false)}
             >
               Teklif Al

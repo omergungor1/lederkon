@@ -31,12 +31,12 @@ export default function Footer() {
             </p>
             <ul className="mt-4 space-y-2 text-sm text-[#D1D5DB]">
               <li>
-                <a href="tel:+905327344119" className="hover:text-[#00E5FF] hover:underline">
+                <a href="tel:+905327344119" className="hover:text-[#B9FF00] hover:underline">
                   0532 734 41 19
                 </a>
               </li>
               <li>
-                <a href="mailto:info@lederkon.com" className="hover:text-[#00E5FF] hover:underline">
+                <a href="mailto:info@lederkon.com" className="hover:text-[#B9FF00] hover:underline">
                   info@lederkon.com
                 </a>
               </li>
@@ -96,7 +96,7 @@ export default function Footer() {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-[#D1D5DB] transition hover:bg-[#00E5FF] hover:text-[#111827]"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-[#D1D5DB] transition hover:bg-[#B9FF00] hover:text-[#111827]"
                 aria-label="Instagram"
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

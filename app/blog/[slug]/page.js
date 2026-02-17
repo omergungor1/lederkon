@@ -29,13 +29,13 @@ export default async function BlogYaziPage({ params }) {
   return (
     <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
       <nav className="mb-6 text-sm text-[#D1D5DB]">
-        <Link href="/blog" className="hover:text-[#00E5FF]">Blog</Link>
+        <Link href="/blog" className="hover:text-[#B9FF00]">Blog</Link>
         <span className="mx-2">/</span>
         <span className="text-white">{icerik.title}</span>
       </nav>
       <h1 className="text-4xl font-bold text-white">{icerik.title}</h1>
       <p className="mt-4 text-lg text-[#D1D5DB]">{icerik.description}</p>
-      <time className="mt-2 block text-sm text-[#00E5FF]">{yazi.date}</time>
+      <time className="mt-2 block text-sm text-[#B9FF00]">{yazi.date}</time>
       <div className="relative mt-8 aspect-video overflow-hidden rounded-xl bg-[#111827]">
         <Image
           src={yazi.image}

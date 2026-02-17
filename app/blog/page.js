@@ -33,7 +33,7 @@ export default function BlogPage() {
               />
             </div>
             <div className="p-5">
-              <time className="text-sm text-[#00E5FF]">{yazi.date}</time>
+              <time className="text-sm text-[#B9FF00]">{yazi.date}</time>
               <h2 className="mt-2 text-xl font-semibold text-white group-hover:text-[#00E5FF]">
                 {yazi.title}
               </h2>
