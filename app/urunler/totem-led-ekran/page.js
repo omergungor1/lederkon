@@ -2,10 +2,10 @@ import UrunSayfaSablon from "@/components/UrunSayfaSablon";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata = {
-  title: "Totem LED Ekran",
+  title: "Totem & Poster LED Ekran",
   description:
-    "Totem ve bilgi ekranı LED çözümleri. AVM, hastane, otel ve kurumsal mekânlarda yönlendirme ve reklam. Totem LED ekran fiyatları.",
-  keywords: "totem led ekran, bilgi ekranı, yönlendirme totemi, led ekran montaj firması",
+    "Totem ve poster bilgi ekranı LED çözümleri. AVM, hastane, otel ve kurumsal mekânlarda yönlendirme ve reklam. Totem LED ekran fiyatları.",
+  keywords: "totem led ekran, poster led ekran, bilgi ekranı, yönlendirme totemi, led ekran montaj firması",
 };
 
 const teknikOzellikler = [

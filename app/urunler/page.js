@@ -2,15 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { URUNLER } from "@/lib/constants";
 
-const imgMap = {
-  "indoor-led-ekran": "/images/products/Indoor LED panel close up.jpg",
-  "outdoor-led-ekran": "/images/products/Outdoor LED cabinet back side.jpg",
-  "dugun-salonu-led-ekran": "/images/gallery/wedding-1.webp",
-  "avm-led-ekran": "/images/gallery/mall-1.png",
-  "cami-led-ekran": "/images/gallery/cami-1.jpg",
-  "totem-led-ekran": "/images/products/LED poster display.webp",
-};
-
 export const metadata = {
   title: "Ürünler",
   description:
@@ -34,7 +25,7 @@ export default function UrunlerPage() {
           >
             <div className="relative h-56">
               <Image
-                src={imgMap[urun.slug] || "/images/products/LED video wall modular panel.webp"}
+                src={urun.image || "/images/products/LED video wall modular panel.webp"}
                 alt={urun.title}
                 fill
                 className="object-cover transition group-hover:scale-105"

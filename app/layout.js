@@ -34,7 +34,7 @@ export const metadata = {
     siteName: "Lederkon",
     title: "Lederkon | Profesyonel LED Ekran Tedarik, Montaj ve Proje Çözümleri",
     description: "LED ekran fiyatları, montaj ve proje çözümleri. Düğün salonu, cami, AVM LED ekran.",
-    images: [{ url: "/lederkon-logo.png", width: 120, height: 40, alt: "Lederkon" }],
+    images: [{ url: "/lederkon-logo-2.png", width: 120, height: 40, alt: "Lederkon" }],
   },
   twitter: {
     card: "summary_large_image",

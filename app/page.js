@@ -3,17 +3,8 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import TeklifForm from "@/components/TeklifForm";
 import JsonLd from "@/components/JsonLd";
-import { URUNLER } from "@/lib/constants";
-import { SITE_URL } from "@/lib/constants";
-
-const hizmetler = [
-  { title: "Indoor LED Ekran", desc: "Kapalı mekânlar için yüksek çözünürlüklü LED ekran montajı.", icon: "🏢" },
-  { title: "Outdoor LED Ekran", desc: "Açık hava ve reklam panoları için dayanıklı LED sistemleri.", icon: "🌆" },
-  { title: "Düğün Salonu", desc: "Düğün ve özel günler için profesyonel LED ekran kiralama.", icon: "💒" },
-  { title: "AVM Ekranları", desc: "Alışveriş merkezleri için dijital reklam ve bilgilendirme ekranları.", icon: "🛒" },
-  { title: "Cami LED Ekran", desc: "Cami ve ibadethaneler için vaaz ve bilgi ekranı çözümleri.", icon: "🕌" },
-  { title: "Totem & Bilgi Ekranı", desc: "Yönlendirme ve bilgilendirme totem LED ekranları.", icon: "📺" },
-];
+import { URUNLER, SITE_URL } from "@/lib/constants";
+import { projeler } from "@/lib/projeler";
 
 const nedenler = [
   { title: "Uzman Ekip", desc: "Yıllarca sektör deneyimine sahip montaj ve proje ekibi." },
@@ -27,13 +18,6 @@ const surec = [
   { step: 2, title: "Teklif", desc: "Ölçü ve kullanım alanına göre detaylı teklif hazırlanır." },
   { step: 3, title: "Montaj", desc: "Uzman ekip tarafından profesyonel montaj yapılır." },
   { step: 4, title: "Devreye Alma", desc: "Test ve eğitim sonrası sistem teslim edilir." },
-];
-
-const projelerHome = [
-  { title: "Düğün Salonu LED Ekran", category: "dugun", image: "/images/gallery/wedding-1.webp", slug: "dugun-salonu" },
-  { title: "AVM İç Mekan Ekran", category: "avm", image: "/images/gallery/mall-1.png", slug: "avm" },
-  { title: "Cami Bilgi ve Vakit Ekranı", category: "cami", image: "/images/gallery/cami-1.jpg", slug: "cami" },
-  { title: "Mağaza Vitrin LED", category: "magaza", image: "/images/gallery/store-1.jpg", slug: "magaza" },
 ];
 
 const localBusinessSchema = {
@@ -58,7 +42,8 @@ export default function Home() {
       <JsonLd data={localBusinessSchema} />
       <section className="relative min-h-[85vh] overflow-hidden bg-[#0B0F1A] py-28 sm:py-36 lg:py-48 xl:py-56">
         <Image
-          src="/led-ekran-home-banner.webp"
+          // src="/led-ekran-home-banner.webp"
+          src="/images/hero/lederkon-6.jpeg"
           alt=""
           fill
           className="object-cover object-center"
@@ -86,29 +71,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-white/10 bg-[#111827] py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-bold text-white sm:text-4xl">
-            Hizmet Verilen Alanlar
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-[#D1D5DB]">
-            LED ekran montaj firması olarak kapalı ve açık alan projelerinde uzmanız.
-          </p>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {hizmetler.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-xl border border-white/10 bg-[#0B0F1A] p-6 transition hover:border-[#00E5FF]/30"
-              >
-                <span className="text-3xl">{item.icon}</span>
-                <h3 className="mt-3 text-lg font-semibold text-white">{item.title}</h3>
-                <p className="mt-2 text-sm text-[#D1D5DB]">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="border-t border-white/10 bg-[#0B0F1A] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-bold text-white sm:text-4xl">
@@ -118,38 +80,27 @@ export default function Home() {
             İhtiyacınıza uygun indoor led ekran, outdoor led ekran ve özel uygulama çözümleri.
           </p>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {URUNLER.map((urun) => {
-              const imgMap = {
-                "indoor-led-ekran": "/images/products/Indoor LED panel close up.jpg",
-                "outdoor-led-ekran": "/images/products/Outdoor LED cabinet back side.jpg",
-                "dugun-salonu-led-ekran": "/images/gallery/wedding-1.webp",
-                "avm-led-ekran": "/images/gallery/mall-1.png",
-                "cami-led-ekran": "/images/gallery/cami-1.jpg",
-                "totem-led-ekran": "/images/products/LED poster display.webp",
-              };
-              return (
-                <Link
-                  key={urun.slug}
-                  href={`/urunler/${urun.slug}`}
-                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-[#111827] transition hover:border-[#00E5FF]/40"
-                >
-                  <div className="relative h-48 bg-[#0B0F1A]">
-                    <Image
-                      src={imgMap[urun.slug] || "/images/products/LED video wall modular panel.webp"}
-                      alt={urun.title}
-                      fill
-                      className="object-cover opacity-80 transition group-hover:opacity-100"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] to-transparent" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold text-white group-hover:text-[#00E5FF]">{urun.title}</h3>
-                    <p className="mt-1 text-sm text-[#D1D5DB]">{urun.short}</p>
-                  </div>
-                </Link>
-              );
-            })}
+            {URUNLER.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/urunler/${item.slug}`}
+                className="block overflow-hidden rounded-xl border border-white/10 bg-[#0B0F1A] transition hover:border-[#00E5FF]/30"
+              >
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm text-[#D1D5DB]">{item.short}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -210,37 +161,45 @@ export default function Home() {
       <section className="border-t border-white/10 bg-[#111827] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-bold text-white sm:text-4xl">
-            Projelerden Örnekler
+            Örnek Uygulamalar
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-[#D1D5DB]">
             Tamamladığımız düğün salonu led ekran, cami led ekran ve avm led ekran projeleri.
           </p>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {projelerHome.map((proje) => (
-              <Link
-                key={proje.title}
-                href="/projeler"
-                className="group overflow-hidden rounded-xl border border-white/10 bg-[#0B0F1A] transition hover:border-[#00E5FF]/30"
+          <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3" id="ornek-uygulamalar">
+            {projeler.map((proje) => (
+              <div
+                key={proje.id}
+                className="group block overflow-hidden rounded-xl border border-white/10 bg-[#0B0F1A] transition hover:border-[#00E5FF]/40"
               >
-                <div className="relative h-48">
+                <div className="relative aspect-[4/3] w-full">
                   <Image
                     src={proje.image}
                     alt={proje.title}
                     fill
-                    className="object-cover transition group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 25vw"
+                    className="object-cover transition duration-300 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 50vw, 33vw"
                   />
+                  {/* Masaüstü: hover'da siyah katman + başlık + açıklama */}
+                  <div
+                    className="absolute inset-0 flex flex-col items-center justify-center bg-black/70 p-4 opacity-0 transition duration-300 group-hover:opacity-100 lg:flex"
+                    aria-hidden
+                  >
+                    <span className="text-center text-lg font-semibold text-white">
+                      {proje.title}
+                    </span>
+                    <span className="mt-2 text-center text-sm text-[#D1D5DB]">
+                      {proje.description}
+                    </span>
+                  </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-white">{proje.title}</h3>
+                {/* Mobil: hover yok, başlık + kısa açıklama altta görünsün */}
+                <div className="border-t border-white/10 bg-[#0B0F1A] px-4 py-3 lg:hidden">
+                  <h3 className="text-sm font-semibold text-white">{proje.title}</h3>
+                  <p className="mt-1 line-clamp-2 text-xs text-[#D1D5DB]">{proje.description}</p>
                 </div>
-              </Link>
+              </div>
             ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Button href="/projeler" variant="secondary">
-              Tüm Projeleri Gör
-            </Button>
           </div>
         </div>
       </section>

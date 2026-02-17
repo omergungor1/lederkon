@@ -8,7 +8,6 @@ const navLinks = [
   { href: "/", label: "Ana Sayfa" },
   { href: "/kurumsal", label: "Kurumsal" },
   { href: "/urunler", label: "Ürünler" },
-  { href: "/projeler", label: "Projeler" },
   { href: "/blog", label: "Blog" },
   { href: "/iletisim", label: "İletişim" },
 ];
@@ -21,14 +20,13 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2" onClick={() => setMenuOpen(false)}>
           <Image
-            src="/lederkon-logo.png"
+            src="/lederkon-logo-2.png"
             alt="Lederkon Logo"
             width={120}
             height={40}
-            className="h-8 w-auto"
+            className="h-20 md:h-32 w-auto"
             priority
           />
-          <span className="text-xl font-bold text-white">Lederkon</span>
         </Link>
 
         <nav className="hidden md:flex md:items-center md:gap-6">
