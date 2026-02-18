@@ -9,11 +9,8 @@ export const metadata = {
 };
 
 const galleryImages = [
-  "/images/gallery/wedding-1.webp",
-  "/images/gallery/mall-1.png",
-  "/images/gallery/cami-1.jpg",
-  "/images/gallery/store-1.jpg",
-  "/images/gallery/billboard-1.webp",
+  "/images/solutions/elastik-sanatsal-led-uygulama.webp",
+  "/images/product-list/LED-flexible-screen.jpg",
 ];
 
 const teknikOzellikler = [

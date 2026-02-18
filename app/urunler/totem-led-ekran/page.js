@@ -9,11 +9,8 @@ export const metadata = {
 };
 
 const galleryImages = [
-  "/images/gallery/wedding-1.webp",
-  "/images/gallery/mall-1.png",
-  "/images/gallery/cami-1.jpg",
+  "/images/solutions/totem-led-screen-2.webp",
   "/images/gallery/store-1.jpg",
-  "/images/gallery/billboard-1.webp",
 ];
 
 const teknikOzellikler = [
@@ -84,7 +81,7 @@ export default function TotemLedEkranPage() {
     <UrunSayfaSablon
       title="Totem LED Ekran"
       description="AVM, hastane ve kurumsal mekânlar için totem ve bilgi ekranı LED çözümleri. Teklif alın."
-      image="/images/products/LED poster display.webp"
+      image="/images/product-list/totem-led-screen.jpg"
       imageAlt="Totem LED ekran"
       galleryImages={galleryImages}
       content={content}

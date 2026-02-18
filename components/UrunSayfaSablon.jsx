@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import TeklifForm from "./TeklifForm";
+import IletisimTalepCTA from "@/components/IletisimTalepCTA";
 import JsonLd from "./JsonLd";
 
 export default function UrunSayfaSablon({
@@ -21,6 +22,8 @@ export default function UrunSayfaSablon({
       {jsonLdProduct && <JsonLd data={jsonLdProduct} />}
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <nav className="mb-6 text-sm text-[#D1D5DB]">
+          <Link href="/" className="hover:text-[#B9FF00]">Ana Sayfa</Link>
+          <span className="mx-2">/</span>
           <Link href="/urunler" className="hover:text-[#B9FF00]">Ürünler</Link>
           <span className="mx-2">/</span>
           <span className="text-white">{title}</span>
@@ -90,12 +93,24 @@ export default function UrunSayfaSablon({
         {sss && sss.length > 0 && (
           <section className="mt-12">
             <h2 className="text-2xl font-bold text-white">Sıkça Sorulan Sorular</h2>
-            <div className="mt-4 space-y-4">
+            <div className="mt-4 space-y-3">
               {sss.map((item, i) => (
-                <div key={i} className="rounded-lg border border-white/10 bg-[#111827] p-4">
-                  <h3 className="font-semibold text-white">{item.soru}</h3>
-                  <p className="mt-2 text-[#D1D5DB]">{item.cevap}</p>
-                </div>
+                <details
+                  key={i}
+                  className="group rounded-xl border border-white/10 bg-[#111827] p-4 transition hover:border-[#00E5FF]/30 hover:shadow-[0_0_24px_rgba(185,255,0,0.08)]"
+                >
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4">
+                    <span className="text-base font-semibold text-white pr-2">
+                      {item.soru}
+                    </span>
+                    <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/5 text-[#B9FF00]">
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-sm leading-relaxed text-[#D1D5DB]">
+                    {item.cevap}
+                  </p>
+                </details>
               ))}
             </div>
           </section>
@@ -108,6 +123,8 @@ export default function UrunSayfaSablon({
           </div>
         </section>
       </div>
+
+      <IletisimTalepCTA />
     </>
   );
 }

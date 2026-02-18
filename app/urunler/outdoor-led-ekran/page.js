@@ -9,11 +9,7 @@ export const metadata = {
 };
 
 const galleryImages = [
-  "/images/gallery/wedding-1.webp",
-  "/images/gallery/mall-1.png",
-  "/images/gallery/cami-1.jpg",
-  "/images/gallery/store-1.jpg",
-  "/images/gallery/billboard-1.webp",
+  "/images/gallery/mall-2.jpg",
 ];
 
 const teknikOzellikler = [
@@ -89,7 +85,7 @@ export default function OutdoorLedEkranPage() {
     <UrunSayfaSablon
       title="Outdoor LED Ekran"
       description="Açık hava ve reklam panoları için yüksek parlaklıklı, dayanıklı outdoor LED ekran. Fiyat ve teklif için iletişime geçin."
-      image="/images/products/Outdoor LED cabinet back side.jpg"
+      image="/images/product-list/outdoor-led-screen.webp"
       imageAlt="Outdoor LED ekran"
       galleryImages={galleryImages}
       content={content}

@@ -9,11 +9,12 @@ export const metadata = {
 };
 
 const galleryImages = [
-  "/images/gallery/wedding-1.webp",
-  "/images/gallery/mall-1.png",
-  "/images/gallery/cami-1.jpg",
-  "/images/gallery/store-1.jpg",
-  "/images/gallery/billboard-1.webp",
+  "/images/gallery/wedding-2.jpg",
+  "/images/gallery/wedding-3.png",
+  "/images/gallery/wedding-4.png",
+  "/images/gallery/wedding-5.jpg",
+  "/images/gallery/wedding-6.webp",
+  "/images/gallery/wedding-7.jpg",
 ];
 
 const teknikOzellikler = [

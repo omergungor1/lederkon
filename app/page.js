@@ -7,6 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import HeroSlider from "@/components/HeroSlider";
 import { URUNLER, SITE_URL } from "@/lib/constants";
 import { projeler } from "@/lib/projeler";
+import { COZUMLER } from "@/lib/cozumler";
 
 const sliderSlides = [
   {
@@ -142,8 +143,7 @@ export default function Home() {
             Profesyonel LED Ekran Çözümleri
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-[#D1D5DB]">
-            Düğün salonu, cami, AVM ve kurumsal mekânlar için indoor ve outdoor LED ekran montajı.
-            LED ekran fiyatları ve proje teklifi için hemen iletişime geçin.
+            Türkiye genelinde düğün salonu LED ekran, cami LED ekran, AVM ve mağaza reklam ekranı, kiralık LED ekran ve dış mekân LED ekran montajı. Indoor ve outdoor projelerde keşif, teklif ve kurulum tek adreste.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Button href="tel:+905327344119" variant="primary">
@@ -315,6 +315,56 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/10 bg-[#0B0F1A] py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-3xl font-bold text-white sm:text-4xl">
+            Çözümlerimiz
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-[#D1D5DB]">
+            LED ekran hizmetleri kapsamında sunduğumuz çözümlerden bir seçki.
+          </p>
+          <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
+            {COZUMLER.slice(0, 6).map((cozum) => (
+              <Link
+                key={cozum.slug}
+                href={`/cozumler/${cozum.slug}`}
+                className="group block overflow-hidden rounded-xl border border-white/10 bg-[#111827] transition hover:border-[#00E5FF]/40 hover:shadow-[0_0_24px_rgba(185,255,0,0.10)]"
+              >
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src={cozum.image}
+                    alt={cozum.title}
+                    fill
+                    className="object-cover transition duration-300 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div
+                    className="absolute inset-0 flex flex-col items-center justify-center bg-black/70 p-4 opacity-0 transition duration-300 group-hover:opacity-100 lg:flex"
+                    aria-hidden
+                  >
+                    <span className="text-center text-lg font-semibold text-white">
+                      {cozum.title}
+                    </span>
+                    <span className="mt-2 text-center text-sm text-[#D1D5DB] line-clamp-3">
+                      {cozum.description}
+                    </span>
+                  </div>
+                </div>
+                <div className="border-t border-white/10 bg-[#111827] px-4 py-3 lg:hidden">
+                  <h3 className="text-sm font-semibold text-white">{cozum.title}</h3>
+                  <p className="mt-1 line-clamp-2 text-xs text-[#D1D5DB]">{cozum.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 flex justify-center">
+            <Button href="/cozumler" variant="primary">
+              Tüm Çözümler
+            </Button>
           </div>
         </div>
       </section>

@@ -2,9 +2,24 @@
 
 import { useState } from "react";
 
+/** TR cep: 05XX XXX XX XX (11 rakam), yazarken boşluklarla formatlar */
+function formatTelefon(value) {
+  let digits = value.replace(/\D/g, "");
+  if (digits.startsWith("5") && digits.length <= 10) digits = "0" + digits;
+  else if (digits.length > 0 && digits[0] !== "0") digits = "0" + digits;
+  digits = digits.slice(0, 11);
+  const parts = [];
+  if (digits.length > 0) parts.push(digits.slice(0, 4));
+  if (digits.length > 4) parts.push(digits.slice(4, 7));
+  if (digits.length > 7) parts.push(digits.slice(7, 9));
+  if (digits.length > 9) parts.push(digits.slice(9, 11));
+  return parts.join(" ");
+}
+
 export default function IletisimTalepCTA() {
   const [acik, setAcik] = useState(false);
   const [status, setStatus] = useState("");
+  const [statusType, setStatusType] = useState(""); // "success" | "error" | ""
   const [formData, setFormData] = useState({
     ad: "",
     email: "",
@@ -12,18 +27,46 @@ export default function IletisimTalepCTA() {
     mesaj: "",
   });
 
+  const telefonRakamSayisi = formData.telefon.replace(/\D/g, "").length;
+  const telefonTamDegil = telefonRakamSayisi > 0 && telefonRakamSayisi !== 11;
+
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (name === "telefon") {
+      setFormData((prev) => ({ ...prev, telefon: formatTelefon(value) }));
+      return;
+    }
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (telefonRakamSayisi !== 11) {
+      setStatus("Telefon numarası tam olmalıdır (11 rakam: 05XX XXX XX XX). Az veya fazla rakam olmamalıdır.");
+      setStatusType("error");
+      return;
+    }
     setStatus("Gönderiliyor...");
-    setTimeout(() => {
-      setStatus("Talebiniz alındı. En kısa sürede sizinle iletişime geçeceğiz.");
+    setStatusType("");
+    try {
+      const res = await fetch("/api/danismanlik-taleb", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setStatus(data.error || "Gönderim başarısız. Lütfen tekrar deneyin.");
+        setStatusType("error");
+        return;
+      }
+      setStatus("Başarıyla gönderildi. En kısa sürede sizinle iletişime geçilecektir.");
+      setStatusType("success");
       setFormData({ ad: "", email: "", telefon: "", mesaj: "" });
-    }, 800);
+    } catch {
+      setStatus("Bağlantı hatası. Lütfen tekrar deneyin.");
+      setStatusType("error");
+    }
   };
 
   return (
@@ -86,7 +129,7 @@ export default function IletisimTalepCTA() {
                 </div>
                 <div>
                   <label htmlFor="cta-telefon" className="mb-1 block text-sm font-medium text-white">
-                    Telefon *
+                    Telefon * <span className="font-normal text-white/70">(11 rakam, 05XX XXX XX XX)</span>
                   </label>
                   <input
                     type="tel"
@@ -95,9 +138,22 @@ export default function IletisimTalepCTA() {
                     required
                     value={formData.telefon}
                     onChange={handleChange}
-                    className="w-full rounded-lg border border-white/30 bg-white/10 px-4 py-2.5 text-white placeholder-white/50 focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
+                    className={`w-full rounded-lg border bg-white/10 px-4 py-2.5 text-white placeholder-white/50 focus:outline-none focus:ring-1 ${
+                      telefonTamDegil ? "border-red-400 focus:border-red-400 focus:ring-red-400" : "border-white/30 focus:border-white focus:ring-white"
+                    }`}
                     placeholder="05XX XXX XX XX"
+                    inputMode="numeric"
+                    autoComplete="tel"
+                    maxLength={14}
+                    title="Tam 11 rakam: 05XX XXX XX XX"
+                    aria-invalid={telefonTamDegil}
+                    aria-describedby={telefonTamDegil ? "cta-telefon-hata" : undefined}
                   />
+                  {telefonTamDegil && (
+                    <p id="cta-telefon-hata" className="mt-1 text-sm text-red-200" role="alert">
+                      Telefon numarası tam olmalıdır (11 rakam). Şu an {telefonRakamSayisi} rakam girdiniz.
+                    </p>
+                  )}
                 </div>
                 <div>
                   <label htmlFor="cta-mesaj" className="mb-1 block text-sm font-medium text-white">
@@ -121,7 +177,13 @@ export default function IletisimTalepCTA() {
                     Talebi Gönder
                   </button>
                   {status && (
-                    <span className="text-sm font-medium text-white/95">{status}</span>
+                    <span
+                      className={`text-sm font-medium ${
+                        statusType === "error" ? "text-red-200" : "text-white/95"
+                      }`}
+                    >
+                      {status}
+                    </span>
                   )}
                 </div>
               </form>

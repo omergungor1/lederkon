@@ -9,11 +9,9 @@ export const metadata = {
 };
 
 const galleryImages = [
-  "/images/gallery/wedding-1.webp",
-  "/images/gallery/mall-1.png",
-  "/images/gallery/cami-1.jpg",
-  "/images/gallery/store-1.jpg",
-  "/images/gallery/billboard-1.webp",
+  "/images/product-list/flexible-led-display-screen.webp",
+  "/images/solutions/Shopping-Mall-LED-Display.jpg",
+  "/images/product-list/totem-led-screen.jpg",
 ];
 
 const teknikOzellikler = [
@@ -90,7 +88,7 @@ export default function IndoorLedEkranPage() {
     <UrunSayfaSablon
       title="Indoor LED Ekran"
       description="Kapalı alanlar için yüksek çözünürlüklü indoor LED ekran çözümleri. LED ekran fiyatları ve montaj teklifi için bize ulaşın."
-      image="/images/products/Indoor LED panel close up.jpg"
+      image="/images/solutions/indoor-led-screen.jpeg"
       imageAlt="Indoor LED ekran"
       galleryImages={galleryImages}
       content={content}

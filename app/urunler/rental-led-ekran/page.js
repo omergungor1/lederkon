@@ -10,11 +10,8 @@ export const metadata = {
 };
 
 const galleryImages = [
-  "/images/gallery/wedding-1.webp",
-  "/images/gallery/mall-1.png",
-  "/images/gallery/cami-1.jpg",
-  "/images/gallery/store-1.jpg",
-  "/images/gallery/billboard-1.webp",
+  "/images/gallery/led-screen-2.jpg",
+  "/images/gallery/led-screen-1.webp",
 ];
 
 const teknikOzellikler = [
