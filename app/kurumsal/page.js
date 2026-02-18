@@ -1,4 +1,5 @@
 import PageHero from "@/components/PageHero";
+import IletisimTalepCTA from "@/components/IletisimTalepCTA";
 
 export const metadata = {
   title: "Kurumsal",
@@ -48,6 +49,7 @@ export default function KurumsalPage() {
           </div>
         </section>
       </div>
+      <IletisimTalepCTA />
     </>
   );
 }

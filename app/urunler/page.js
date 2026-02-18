@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import IletisimTalepCTA from "@/components/IletisimTalepCTA";
 import { URUNLER } from "@/lib/constants";
 
 export const metadata = {
@@ -99,6 +100,7 @@ export default function UrunlerPage() {
           ))}
         </div>
       </div>
+      <IletisimTalepCTA />
     </>
   );
 }

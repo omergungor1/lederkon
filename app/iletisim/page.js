@@ -1,6 +1,7 @@
 import PageHero from "@/components/PageHero";
 import TeklifForm from "@/components/TeklifForm";
 import BizeUlasinForm from "@/components/BizeUlasinForm";
+import IletisimTalepCTA from "@/components/IletisimTalepCTA";
 
 export const metadata = {
   title: "İletişim",
@@ -113,6 +114,7 @@ export default function IletisimPage() {
         </div>
       </section>
       </div>
+      <IletisimTalepCTA />
     </>
   );
 }

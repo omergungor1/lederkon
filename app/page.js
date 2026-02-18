@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
 import TeklifForm from "@/components/TeklifForm";
+import IletisimTalepCTA from "@/components/IletisimTalepCTA";
 import JsonLd from "@/components/JsonLd";
 import HeroSlider from "@/components/HeroSlider";
 import { URUNLER, SITE_URL } from "@/lib/constants";
@@ -360,7 +361,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-white/10 bg-[#0B0F1A] py-16 sm:py-20">
+      <section className="border-t border-white/10 bg-[#111827] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold text-white sm:text-4xl">
@@ -375,6 +376,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <IletisimTalepCTA />
     </>
   );
 }

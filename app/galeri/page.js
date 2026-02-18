@@ -1,5 +1,6 @@
 import PageHero from "@/components/PageHero";
 import GaleriGrid from "@/components/GaleriGrid";
+import IletisimTalepCTA from "@/components/IletisimTalepCTA";
 import { galeriGorselleri } from "@/lib/galeri";
 
 export const metadata = {
@@ -22,6 +23,7 @@ export default function GaleriPage() {
           <GaleriGrid items={galeriGorselleri} />
         </div>
       </section>
+      <IletisimTalepCTA />
     </>
   );
 }

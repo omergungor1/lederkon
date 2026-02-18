@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import IletisimTalepCTA from "@/components/IletisimTalepCTA";
 import { blogYazilari } from "@/lib/blog";
 
 export const metadata = {
@@ -45,6 +46,7 @@ export default function BlogPage() {
           ))}
         </div>
       </div>
+      <IletisimTalepCTA />
     </>
   );
 }
