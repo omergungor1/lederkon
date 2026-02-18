@@ -14,6 +14,7 @@ const footerLinks = {
     { href: "/urunler/totem-led-ekran", label: "Totem & Poster LED Ekran" },
   ],
   diger: [
+    { href: "/galeri", label: "Galeri" },
     { href: "/blog", label: "Blog" },
     { href: "/iletisim", label: "İletişim" },
   ],

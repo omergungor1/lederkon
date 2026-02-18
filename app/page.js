@@ -19,7 +19,7 @@ const sliderSlides = [
     description: "Montaj sonrası garanti ve hızlı teknik servis ile Lederkon güvencesi.",
   },
   {
-    image: "/images/gallery/cami-1.jpg",
+    image: "/images/gallery/market-led-ekran-2.jpeg",
     title: "100.000+ Saat Kullanım Ömrü",
     description: "Kaliteli LED modüller ve doğru projelendirme ile yıllarca kesintisiz kullanım.",
   },
