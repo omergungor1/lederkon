@@ -1,6 +1,8 @@
 import PageHero from "@/components/PageHero";
 import IletisimTalepCTA from "@/components/IletisimTalepCTA";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Kurumsal",
   description:

@@ -1,6 +1,8 @@
 import UrunSayfaSablon from "@/components/UrunSayfaSablon";
 import { SITE_URL } from "@/lib/constants";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Kiralık (Rental) LED Ekran",
   description:

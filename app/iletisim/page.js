@@ -3,6 +3,8 @@ import TeklifForm from "@/components/TeklifForm";
 import BizeUlasinForm from "@/components/BizeUlasinForm";
 import IletisimTalepCTA from "@/components/IletisimTalepCTA";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "İletişim",
   description:

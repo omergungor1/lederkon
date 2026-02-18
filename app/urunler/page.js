@@ -4,6 +4,8 @@ import PageHero from "@/components/PageHero";
 import IletisimTalepCTA from "@/components/IletisimTalepCTA";
 import { URUNLER } from "@/lib/constants";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Ürünler",
   description:

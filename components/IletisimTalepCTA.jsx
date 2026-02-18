@@ -54,7 +54,13 @@ export default function IletisimTalepCTA() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      const data = await res.json().catch(() => ({}));
+      const raw = await res.text();
+      let data = {};
+      try {
+        data = raw ? JSON.parse(raw) : {};
+      } catch {
+        data = {};
+      }
       if (!res.ok) {
         setStatus(data.error || "Gönderim başarısız. Lütfen tekrar deneyin.");
         setStatusType("error");
@@ -63,8 +69,8 @@ export default function IletisimTalepCTA() {
       setStatus("Başarıyla gönderildi. En kısa sürede sizinle iletişime geçilecektir.");
       setStatusType("success");
       setFormData({ ad: "", email: "", telefon: "", mesaj: "" });
-    } catch {
-      setStatus("Bağlantı hatası. Lütfen tekrar deneyin.");
+    } catch (err) {
+      setStatus(err && err.message ? err.message : "Bağlantı hatası. Lütfen tekrar deneyin.");
       setStatusType("error");
     }
   };

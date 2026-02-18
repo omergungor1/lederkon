@@ -21,13 +21,14 @@ export async function POST(req) {
     const body = await req.json();
     const { ad, email, telefon, mesaj } = body;
 
-    if (!ad || !email || !telefon || !mesaj) {
+    if (!ad || !email || !telefon) {
       return Response.json(
-        { error: "Ad, e-posta, telefon ve mesaj zorunludur." },
+        { error: "Ad, e-posta ve telefon zorunludur." },
         { status: 400 }
       );
     }
 
+    const mesajMetin = typeof mesaj === "string" && mesaj.trim() ? mesaj.trim() : "Belirtilmedi";
     const from = process.env.RESEND_FROM || "Lederkon İletişim <noreply@lederkon.com>";
 
     const { data, error } = await resend.emails.send({
@@ -40,7 +41,7 @@ export async function POST(req) {
         <p><strong>E-posta:</strong> ${escapeHtml(email)}</p>
         <p><strong>Telefon:</strong> ${escapeHtml(telefon)}</p>
         <p><strong>Proje / Danışmanlık Konusu:</strong></p>
-        <p>${escapeHtml(mesaj).replace(/\n/g, "<br>")}</p>
+        <p>${escapeHtml(mesajMetin).replace(/\n/g, "<br>")}</p>
       `,
     });
 
