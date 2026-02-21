@@ -18,6 +18,7 @@ const footerLinks = {
     { href: "/galeri", label: "Galeri" },
     { href: "/blog", label: "Blog" },
     { href: "/iletisim", label: "İletişim" },
+    { href: "/sitemap.xml", label: "Site Haritası" },
   ],
 };
 

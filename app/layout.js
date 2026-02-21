@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { SITE_URL } from "@/lib/constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,12 +35,20 @@ export const metadata = {
     siteName: "Lederkon",
     title: "Lederkon | Profesyonel LED Ekran Tedarik, Montaj ve Proje Çözümleri",
     description: "LED ekran fiyatları, montaj ve proje çözümleri. Düğün salonu, cami, AVM LED ekran.",
-    images: [{ url: "/lederkon-logo-2.png", width: 120, height: 40, alt: "Lederkon" }],
+    images: [
+      {
+        url: `${SITE_URL}/lederkon-logo.png`,
+        width: 1200,
+        height: 630,
+        alt: "Lederkon - Profesyonel LED Ekran Tedarik ve Montaj",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Lederkon | LED Ekran Montaj ve Proje",
     description: "LED ekran fiyatları ve profesyonel montaj. Düğün salonu, cami, AVM LED ekran.",
+    images: [`${SITE_URL}/lederkon-logo.png`],
   },
   robots: {
     index: true,

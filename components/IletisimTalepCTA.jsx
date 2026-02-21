@@ -82,22 +82,32 @@ export default function IletisimTalepCTA() {
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
             Projeniz hakkında konuşalım
           </h2>
-          <button
-            type="button"
-            onClick={() => setAcik(!acik)}
-            className="mt-6 inline-flex items-center justify-center rounded-full border-2 border-white bg-transparent px-8 py-3 font-semibold text-white transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#B91C1C]"
-            aria-expanded={acik}
-            aria-controls="danismanlik-form"
-          >
-            {acik ? "Formu Kapat" : "Ücretsiz Danışmanlık Talep Edin"}
-          </button>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="tel:+905327344119"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white px-8 py-3 font-semibold text-[#B91C1C] transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#B91C1C]"
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Hemen ara
+            </a>
+            <button
+              type="button"
+              onClick={() => setAcik(!acik)}
+              className="inline-flex items-center justify-center rounded-full border-2 border-white bg-transparent px-8 py-3 font-semibold text-white transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#B91C1C]"
+              aria-expanded={acik}
+              aria-controls="danismanlik-form"
+            >
+              {acik ? "Formu Kapat" : "Ücretsiz Danışmanlık Talep Edin"}
+            </button>
+          </div>
         </div>
 
         <div
           id="danismanlik-form"
-          className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
-            acik ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-          }`}
+          className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${acik ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+            }`}
           aria-hidden={!acik}
         >
           <div className="overflow-hidden">
@@ -144,9 +154,8 @@ export default function IletisimTalepCTA() {
                     required
                     value={formData.telefon}
                     onChange={handleChange}
-                    className={`w-full rounded-lg border bg-white/10 px-4 py-2.5 text-white placeholder-white/50 focus:outline-none focus:ring-1 ${
-                      telefonTamDegil ? "border-red-400 focus:border-red-400 focus:ring-red-400" : "border-white/30 focus:border-white focus:ring-white"
-                    }`}
+                    className={`w-full rounded-lg border bg-white/10 px-4 py-2.5 text-white placeholder-white/50 focus:outline-none focus:ring-1 ${telefonTamDegil ? "border-red-400 focus:border-red-400 focus:ring-red-400" : "border-white/30 focus:border-white focus:ring-white"
+                      }`}
                     placeholder="05XX XXX XX XX"
                     inputMode="numeric"
                     autoComplete="tel"
@@ -184,9 +193,8 @@ export default function IletisimTalepCTA() {
                   </button>
                   {status && (
                     <span
-                      className={`text-sm font-medium ${
-                        statusType === "error" ? "text-red-200" : "text-white/95"
-                      }`}
+                      className={`text-sm font-medium ${statusType === "error" ? "text-red-200" : "text-white/95"
+                        }`}
                     >
                       {status}
                     </span>
