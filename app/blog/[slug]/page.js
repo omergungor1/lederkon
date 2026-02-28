@@ -42,7 +42,7 @@ export default async function BlogYaziPage({ params }) {
         <time className="mt-2 block text-sm text-[#B9FF00]">{yazi.date}</time>
         <div className="relative mt-8 aspect-video overflow-hidden rounded-xl bg-[#111827]">
           <Image
-            src={yazi.image}
+            src={encodeURI(yazi.image)}
             alt={icerik.title}
             fill
             className="object-cover"

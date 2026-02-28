@@ -28,7 +28,7 @@ export default function BlogPage() {
             >
               <div className="relative h-48">
                 <Image
-                  src={yazi.image}
+                  src={encodeURI(yazi.image)}
                   alt={yazi.title}
                   fill
                   className="object-cover transition group-hover:scale-105"
