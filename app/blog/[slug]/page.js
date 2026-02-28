@@ -42,12 +42,13 @@ export default async function BlogYaziPage({ params }) {
         <time className="mt-2 block text-sm text-[#B9FF00]">{yazi.date}</time>
         <div className="relative mt-8 aspect-video overflow-hidden rounded-xl bg-[#111827]">
           <Image
-            src={encodeURI(yazi.image)}
+            src={yazi.image}
             alt={icerik.title}
             fill
             className="object-cover"
             priority
             sizes="(max-width: 1024px) 100vw, 896px"
+            unoptimized
           />
         </div>
         <div className="prose prose-invert mt-10 max-w-none">{icerik.body}</div>
