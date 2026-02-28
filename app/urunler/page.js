@@ -69,7 +69,7 @@ export default function UrunlerPage() {
             >
               <div className="relative h-56">
                 <Image
-                  src={urun.image || "/images/products/LED video wall modular panel.webp"}
+                  src={urun.image || "/images/products/LED-video-wall-modular-panel.webp"}
                   alt={urun.title}
                   fill
                   className="object-cover transition group-hover:scale-105"

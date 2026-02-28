@@ -11,7 +11,7 @@ import { COZUMLER } from "@/lib/cozumler";
 
 const sliderSlides = [
   {
-    image: "/images/gallery/Siyane Scarf Led Ekran.jpeg",
+    image: "/images/gallery/Siyane-Scarf-Led-Ekran.jpeg",
     title: "Bursa AVM Eşarp Mağazası LED Ekran Uygulaması",
     description: "Bursa alışveriş merkezinde eşarp mağazası için vitrin ve reklam LED ekran montajı. Mağaza içi LED ekran çözümü.",
   },
