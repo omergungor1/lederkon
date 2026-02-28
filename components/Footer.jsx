@@ -30,7 +30,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-white">Lederkon</h3>
             <p className="mt-2 text-sm text-[#D1D5DB]">
-              Profesyonel LED ekran montaj ve proje çözümleri. Türkiye genelinde hizmet.
+              Profesyonel LED ekran montaj ve proje çözümleri. Bursa merkezli, Türkiye genelinde hizmet.
             </p>
             <ul className="mt-4 space-y-2 text-sm text-[#D1D5DB]">
               <li>
@@ -85,7 +85,7 @@ export default function Footer() {
             </ul>
             <div className="mt-4 flex gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1aWxZXoxh4/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-[#D1D5DB] transition hover:bg-[#00E5FF] hover:text-[#111827]"
@@ -96,7 +96,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/lederkon"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-[#D1D5DB] transition hover:bg-[#B9FF00] hover:text-[#111827]"

@@ -11,6 +11,11 @@ import { COZUMLER } from "@/lib/cozumler";
 
 const sliderSlides = [
   {
+    image: "/images/gallery/Siyane Scarf Led Ekran.jpeg",
+    title: "Bursa AVM Eşarp Mağazası LED Ekran Uygulaması",
+    description: "Bursa alışveriş merkezinde eşarp mağazası için vitrin ve reklam LED ekran montajı. Mağaza içi LED ekran çözümü.",
+  },
+  {
     image: "/images/gallery/wedding-1.webp",
     title: "Dayanıklı ve Sağlam Kabinet",
     description: "Yüksek kaliteli malzeme ve profesyonel montaj ile uzun ömürlü LED ekran çözümleri.",
@@ -161,7 +166,7 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl">
-                Türkiye&apos;nin Güvenilir LED Ekran Tedarikçisi
+                Bursa Merkezli, Türkiye Genelinde LED Ekran Tedarik ve Montaj
               </h2>
               <div className="mt-4 h-1 w-16 rounded-full bg-[#00E5FF]" aria-hidden />
               <p className="mt-6 max-w-lg text-[#D1D5DB] leading-relaxed">
