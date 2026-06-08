@@ -45,7 +45,7 @@ export default function IletisimPage() {
               <p className="mb-3 text-sm font-semibold text-white">Sosyal Medya</p>
               <div className="flex gap-3">
                 <a
-                  href="https://www.facebook.com/share/1aWxZXoxh4/"
+                  href="https://www.facebook.com/share/1BJ4GPhw9x/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 text-[#D1D5DB] transition hover:bg-[#00E5FF] hover:text-[#111827]"
@@ -56,7 +56,7 @@ export default function IletisimPage() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.instagram.com/lederkon"
+                  href="https://www.instagram.com/led.erkon/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 text-[#D1D5DB] transition hover:bg-[#B9FF00] hover:text-[#111827]"

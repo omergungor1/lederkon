@@ -85,7 +85,7 @@ export default function Footer() {
             </ul>
             <div className="mt-4 flex gap-3">
               <a
-                href="https://www.facebook.com/share/1aWxZXoxh4/"
+                href="https://www.facebook.com/share/1BJ4GPhw9x/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-[#D1D5DB] transition hover:bg-[#00E5FF] hover:text-[#111827]"
@@ -96,7 +96,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/lederkon"
+                href="https://www.instagram.com/led.erkon/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-[#D1D5DB] transition hover:bg-[#B9FF00] hover:text-[#111827]"

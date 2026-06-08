@@ -53,7 +53,7 @@ export default function PageHero({ title, description, variant = "default" }) {
                 </svg>
               </a>
               <a
-                href="https://www.facebook.com/share/1aWxZXoxh4/"
+                href="https://www.facebook.com/share/1BJ4GPhw9x/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white/90 shadow-[0_0_20px_rgba(0,229,255,0.15)] transition hover:border-[#00E5FF]/50 hover:bg-white/10 hover:text-white"
@@ -64,7 +64,7 @@ export default function PageHero({ title, description, variant = "default" }) {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/lederkon"
+                href="https://www.instagram.com/led.erkon/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white/90 shadow-[0_0_20px_rgba(185,255,0,0.12)] transition hover:border-[#B9FF00]/50 hover:bg-white/10 hover:text-white"
