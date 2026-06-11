@@ -12,6 +12,7 @@ const footerLinks = {
     { href: "/urunler/avm-led-ekran", label: "AVM LED Ekran" },
     { href: "/urunler/cami-led-ekran", label: "Cami LED Ekran" },
     { href: "/urunler/totem-led-ekran", label: "Totem & Poster LED Ekran" },
+    { href: "/urunler/tak-calistir-led-ekran", label: "Tak Çalıştır LED Ekran" },
   ],
   diger: [
     { href: "/cozumler", label: "Çözümler" },

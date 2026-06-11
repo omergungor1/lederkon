@@ -22,6 +22,7 @@ const urunRozetleri = {
   "avm-led-ekran": ["Reklam", "Bilgilendirme"],
   "cami-led-ekran": ["Vakit / Vaaz", "İç mekân"],
   "totem-led-ekran": ["Yönlendirme", "Poster / Totem"],
+  "tak-calistir-led-ekran": ["Tak çalıştır", "LED Poster / Tekerlekli"],
   "transparan-led-ekran": ["Şeffaf", "Vitrin / Cam"],
   "elastik-led-ekran": ["Esnek", "Kavisli yüzey"],
 };

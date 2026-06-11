@@ -3,6 +3,7 @@ import Link from "next/link";
 import TeklifForm from "./TeklifForm";
 import IletisimTalepCTA from "@/components/IletisimTalepCTA";
 import JsonLd from "./JsonLd";
+import UrunGaleri from "./UrunGaleri";
 
 export default function UrunSayfaSablon({
   title,
@@ -44,28 +45,7 @@ export default function UrunSayfaSablon({
         )}
 
         {galleryImages && galleryImages.length > 0 && (
-          <section className="mt-8">
-            <h2 className="text-2xl font-bold text-white">Görsel Galeri</h2>
-            <p className="mt-2 text-[#D1D5DB]">
-              Ürüne ait örnek uygulama ve kurulum görselleri.
-            </p>
-            <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-              {galleryImages.map((src, i) => (
-                <div
-                  key={`${src}-${i}`}
-                  className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-[#111827] transition hover:border-[#00E5FF]/30 hover:shadow-[0_0_20px_rgba(185,255,0,0.10)]"
-                >
-                  <Image
-                    src={src}
-                    alt={`${title} galeri ${i + 1}`}
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 180px"
-                  />
-                </div>
-              ))}
-            </div>
-          </section>
+          <UrunGaleri title={title} galleryImages={galleryImages} />
         )}
         <div className="prose prose-invert mt-10 max-w-none">
           {content}
