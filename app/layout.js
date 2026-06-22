@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import GoogleTag from "@/components/GoogleTag";
+import GoogleAdsConversion from "@/components/GoogleAdsConversion";
 import { SITE_URL } from "@/lib/constants";
 
 const geistSans = Geist({
@@ -60,6 +62,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <body className={`${geistSans.variable} font-sans antialiased bg-[#0B0F1A] text-[#D1D5DB]`}>
+        <GoogleTag />
+        <GoogleAdsConversion />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
